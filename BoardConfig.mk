@@ -43,7 +43,7 @@ TARGET_USERIMAGES_USE_F2FS := true
 BOARD_HAS_LARGE_FILESYSTEM := true
 BOARD_RECOVERY_SWIPE := true
 TARGET_PREBUILT_KERNEL := device/yu/tomato/kernel
-TARGET_RECOVERY_PIXEL_FORMAT := "RGBA_8888"
+TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 
 # TWRP Build Flags
@@ -53,5 +53,15 @@ RECOVERY_SDCARD_ON_DATA := true
 TW_INCLUDE_CRYPTO := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 
-# Vendor Init
-TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
+TARGET_RECOVERY_IS_MULTIROM := true
+MR_INPUT_TYPE := type_b
+MR_INIT_DEVICES := device/yu/tomato/multirom/mr_init_devices.c
+DEVICE_RESOLUTION := 768x1280
+MR_DPI := hdpi
+MR_DPI_FONT := 216
+MR_FSTAB := device/yu/tomato/recovery/etc/twrp.fstab
+MR_KEXEC_MEM_MIN := 0x0
+MR_PIXEL_FORMAT := "ABGR_8888"
+MR_DEVICE_HOOKS := device/yu/tomato/multirom/mr_hooks.c
+MR_DEVICE_HOOKS_VER := 5
+MR_DEVICE_VARIANTS := YUREKA 
