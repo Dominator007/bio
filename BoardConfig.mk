@@ -54,7 +54,7 @@ TW_INCLUDE_CRYPTO := true
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 
 TARGET_RECOVERY_IS_MULTIROM := true
-MR_INPUT_TYPE := type_b
+MR_INPUT_TYPE := type_a
 MR_INIT_DEVICES := device/yu/tomato/multirom/mr_init_devices.c
 DEVICE_RESOLUTION := 768x1280
 MR_DPI := hdpi
