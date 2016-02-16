@@ -7,9 +7,9 @@
 // You can use * at the end to init this folder and all its subfolders
 const char *mr_init_devices[] =
 {
-		
+
 	"/sys/class/graphics/fb0",
-	
+
 	"/sys/block/mmcblk0",
 	"/sys/devices/soc.0",
 	"/sys/devices/soc.0/7824900.sdhci",
@@ -24,11 +24,17 @@ const char *mr_init_devices[] =
 	"/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p26", //persist
 	"/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p25", //system
 	"/sys/devices/soc.0/7824900.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mmcblk0p29", //userdata
+
+	//sdcard
+	"/sys/devices/soc.0/7864900.sdhci/mmc_host/mmc1",
+        "/sys/devices/soc.0/7864900.sdhci/mmc_host/mmc1/mmc1:0001",
+        "/sys/devices/soc.0/7864900.sdhci/mmc_host/mmc1/mmc1:0001/block",
+        "/sys/devices/soc.0/7864900.sdhci/mmc_host/mmc1/mmc1:0001/block/mmcblk1*",
 	"/sys/bus/mmc",
 	"/sys/bus/mmc/drivers/mmcblk",
 	"/sys/module/mmc_core",
 	"/sys/module/mmcblk",
-	
+
 	"/sys/devices/soc.0/gpio_keys.72/input*",
 	"/sys/devices/virtual/input*",
         " /sys/devices/virtual/touchscreen/touchscreen_dev/*"

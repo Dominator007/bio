@@ -50,7 +50,7 @@ RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TARGET_RECOVERY_FSTAB := device/yu/tomato/recovery/etc/twrp.fstab
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
-TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_CRYPTO := false
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
 
 TARGET_RECOVERY_IS_MULTIROM := true
@@ -60,7 +60,7 @@ DEVICE_RESOLUTION := 768x1280
 MR_DPI := hdpi
 MR_DPI_FONT := 216
 MR_FSTAB := device/yu/tomato/recovery/etc/twrp.fstab
-MR_KEXEC_MEM_MIN := 0x0
+MR_KEXEC_MEM_MIN := 0x85000000
 MR_PIXEL_FORMAT := "ABGR_8888"
 MR_DEVICE_HOOKS := device/yu/tomato/multirom/mr_hooks.c
 MR_DEVICE_HOOKS_VER := 5
